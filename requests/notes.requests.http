@@ -1,0 +1,28 @@
+### Find Note
+GET http://localhost:3000/api/notes
+
+### Find One Note
+GET http://localhost:3000/api/notes/6299434ab081fed496248c2b
+
+### Create Note
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+
+{
+  "name": "Five Test",
+  "description": "Five Description",
+  "user": "carloscdev"
+}
+
+### Delete Note
+DELETE http://localhost:3000/api/notes/6299450b559fe84f3b92c1b9
+
+### Update Note
+PUT http://localhost:3000/api/notes/62994000b081fed496248c29
+Content-Type: application/json
+
+{
+  "name": "Update Third Test",
+  "description": "Five Description",
+  "user": "carloscdev"
+}
