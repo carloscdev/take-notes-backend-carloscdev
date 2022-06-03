@@ -12,7 +12,10 @@ router.post(
   validatorHandler(createNotesSchema, 'body'),
   (req, res, next) => service.create(req, res, next)
 );
-router.get('/', (req, res, next) => service.find(req, res, next));
+router.get(
+  '/',
+  (req, res, next) => service.find(req, res, next)
+);
 router.get(
   '/:id',
   validatorHandler(getNoteSchema, 'params'),
