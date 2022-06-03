@@ -12,12 +12,12 @@ GET http://localhost:3000/api/notes
 #### Get Detail Note
 
 ```bash
-GET http://localhost:3000/api/notes/:id
+GET https://take-notes-backend-carloscdev.herokuapp.com/api/notes/:id
 ```
 #### Create Note
 
 ```bash
-POST http://localhost:3000/api/notes
+POST https://take-notes-backend-carloscdev.herokuapp.com/api/notes
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 #### Update Note
 
 ```bash
-PUT http://localhost:3000/api/notes
+PUT https://take-notes-backend-carloscdev.herokuapp.com/api/notes
 Content-Type: application/json
 
 {
@@ -43,7 +43,7 @@ Content-Type: application/json
 #### Delete Note
 
 ```bash
-DELETE http://localhost:3000/api/notes/:id
+DELETE https://take-notes-backend-carloscdev.herokuapp.com/api/notes/:id
 ```
 
 ## License
