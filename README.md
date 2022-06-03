@@ -36,7 +36,7 @@ Content-Type: application/json
   "name": "Title Note",
   "description": "Description Note",
   "user": "username",
-  "status": "username",
+  "status": "PENDING" | "IN_PROGRESS" | "DONE",
   "is_active": true,
 }
 ```
