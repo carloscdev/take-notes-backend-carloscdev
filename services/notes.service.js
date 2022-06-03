@@ -7,6 +7,7 @@ class NotesService {
   async create(req, res, next) {
     try {
       const body = req.body;
+      body.user = req.user._id
       const response = await Note.create(body);
       res.json(response);
     } catch (error) {
@@ -18,7 +19,7 @@ class NotesService {
     try {
       const { search, is_active } = req.query;
       const regex = new RegExp(search, 'i')
-      const noteDB = await Note.find({is_active: is_active ?? true, name: {$regex: regex}});
+      const noteDB = await Note.find({user: req.user._id,is_active: is_active ?? true, name: {$regex: regex}});
       res.json(noteDB)
     } catch (error) {
       next(error);

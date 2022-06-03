@@ -1,0 +1,36 @@
+### Find One User
+GET http://localhost:3000/api/user/profile/629a472164bd66320308369a
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjYyOWE0NzIxNjRiZDY2MzIwMzA4MzY5YSIsIm5hbWUiOiJDYXJsb3MgISEhIiwicG9zaXRpb24iOiJGcm9udC1lbmQiLCJ1c2VybmFtZSI6ImNhcmxvc2NkZXYiLCJlbWFpbCI6ImNhcmxvc2NkZXZAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRBdCI6IjIwMjItMDYtMDNUMTc6Mzg6NDEuNzMzWiIsInVwZGF0ZWRBdCI6IjIwMjItMDYtMDNUMTk6NDk6MDYuNzk1WiJ9LCJpYXQiOjE2NTQyODgwMDEsImV4cCI6MTY1Njg4MDAwMX0.yYx-6ELWGwLN3he1Xt9SQG1roEFWXmtyJ_zIbFSm_Nw
+
+### Create User
+POST http://localhost:3000/api/user
+Content-Type: application/json
+
+{
+  "name": "La boni",
+  "position": "cat",
+  "username": "test",
+  "email": "test@outlook.com",
+  "password": "test"
+}
+
+
+### Update User
+PUT http://localhost:3000/api/user/profile/629a472164bd66320308369a
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjYyOWE0NzIxNjRiZDY2MzIwMzA4MzY5YSIsIm5hbWUiOiJDYXJsb3MgISEhIiwicG9zaXRpb24iOiJGcm9udC1lbmQiLCJ1c2VybmFtZSI6ImNhcmxvc2NkZXYiLCJlbWFpbCI6ImNhcmxvc2NkZXZAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRBdCI6IjIwMjItMDYtMDNUMTc6Mzg6NDEuNzMzWiIsInVwZGF0ZWRBdCI6IjIwMjItMDYtMDNUMTk6NDk6MDYuNzk1WiJ9LCJpYXQiOjE2NTQyODgwMDEsImV4cCI6MTY1Njg4MDAwMX0.yYx-6ELWGwLN3he1Xt9SQG1roEFWXmtyJ_zIbFSm_Nw
+
+{
+  "name": "Carlos !!!",
+  "position": "Front-end",
+  "username": "carloscdev",
+  "email": "carloscdev@gmail.com"
+}
+
+### Update User Password
+PUT http://localhost:3000/api/user/password/629a472164bd66320308369a
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjYyOWE0NzIxNjRiZDY2MzIwMzA4MzY5YSIsIm5hbWUiOiJDYXJsb3MgISEhIiwicG9zaXRpb24iOiJGcm9udC1lbmQiLCJ1c2VybmFtZSI6ImNhcmxvc2NkZXYiLCJlbWFpbCI6ImNhcmxvc2NkZXZAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRBdCI6IjIwMjItMDYtMDNUMTc6Mzg6NDEuNzMzWiIsInVwZGF0ZWRBdCI6IjIwMjItMDYtMDNUMTk6NDk6MDYuNzk1WiJ9LCJpYXQiOjE2NTQyODgwMDEsImV4cCI6MTY1Njg4MDAwMX0.yYx-6ELWGwLN3he1Xt9SQG1roEFWXmtyJ_zIbFSm_Nw
+
+{
+  "password": "carloscdev"
+}

@@ -11,15 +11,15 @@ const is_active = Joi.boolean();
 const createNotesSchema = Joi.object({
   name: name.required(),
   description: description.required(),
-  user: user.required(),
+  user,
   status,
   is_active
 })
 
 const updateNotesSchema = Joi.object({
-  name: name.required(),
-  description: description.required(),
-  user: user.required(),
+  name,
+  description,
+  user,
   status,
   is_active
 })
