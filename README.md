@@ -7,7 +7,7 @@ A simple project with Node JS, Express, Mongo DB
 #### Get List Notes (optional params: search - is_active)
 
 ```bash
-GET http://localhost:3000/api/notes
+GET https://take-notes-backend-carloscdev.herokuapp.com/api/notes
 ```
 #### Get Detail Note
 
