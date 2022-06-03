@@ -1,17 +1,22 @@
 ### Find Note
 GET http://localhost:3000/api/notes
 
+### Search Note
+GET http://localhost:3000/api/notes?search=active&is_active=false
+
 ### Find One Note
-GET http://localhost:3000/api/notes/6299434ab081fed496248c2b
+GET http://localhost:3000/api/notes/62994b4e8e2fec01a648cb09
 
 ### Create Note
 POST http://localhost:3000/api/notes
 Content-Type: application/json
 
 {
-  "name": "Five Test",
-  "description": "Five Description",
-  "user": "carloscdev"
+  "name": "No active Test",
+  "description": "No active Description",
+  "user": "carloscdev",
+  "status": "DONE",
+  "is_active": false
 }
 
 ### Delete Note
