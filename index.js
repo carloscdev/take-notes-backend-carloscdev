@@ -1,5 +1,6 @@
 const express = require('express');
 const routerApi = require('./routes');
+const path = require('path');
 const { logErrors, errorHandler, boomErrorHandler } = require('./middlewares/error.handler');
 const app = express();
 const dotenv = require('dotenv');
@@ -27,6 +28,8 @@ app.use(logErrors);
 app.use(boomErrorHandler);
 app.use(errorHandler);
 
+// Index.html
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port, (req, res) => {
   console.log(`Server run in port http//localhost:${port}`)
