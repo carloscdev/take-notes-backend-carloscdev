@@ -5,7 +5,7 @@ GET http://localhost:3000/api/notes
 GET http://localhost:3000/api/notes?search=active&is_active=false
 
 ### Find One Note
-GET http://localhost:3000/api/notes/62994b4e8e2fec01a648cb09
+GET http://localhost:3000/api/notes/62995393d8665f477f8e4263
 
 ### Create Note
 POST http://localhost:3000/api/notes
@@ -20,14 +20,16 @@ Content-Type: application/json
 }
 
 ### Delete Note
-DELETE http://localhost:3000/api/notes/6299450b559fe84f3b92c1b9
+DELETE http://localhost:3000/api/notes/62995393d8665f477f8e4263
 
 ### Update Note
-PUT http://localhost:3000/api/notes/62994000b081fed496248c29
+PUT http://localhost:3000/api/notes/6299535dd8665f477f8e425d
 Content-Type: application/json
 
 {
-  "name": "Update Third Test",
+  "name": "Updateeeee",
   "description": "Five Description",
-  "user": "carloscdev"
+  "user": "carloscdev",
+  "status": "IN_PROCESS",
+  "is_active": false
 }

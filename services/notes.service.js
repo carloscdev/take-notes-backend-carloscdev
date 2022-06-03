@@ -1,67 +1,67 @@
 const Note = require('../models/notes.models')
+const boom = require('@hapi/boom');
 
 class NotesService {
   constructor() {}
 
-  async create(req, res) {
+  async create(req, res, next) {
     try {
       const body = req.body;
       const response = await Note.create(body);
-      res.json(response)
+      res.json(response);
     } catch (error) {
-      res.json({message: error.message});
+      next(error);
     }
   }
 
-  async find(req, res) {
+  async find(req, res, next) {
     try {
       const { search, is_active } = req.query;
       const regex = new RegExp(search, 'i')
-      console.log(search);
       const noteDB = await Note.find({is_active: is_active ?? true, name: {$regex: regex}});
       res.json(noteDB)
     } catch (error) {
-      res.json({message: error.message});
+      next(error);
     }
   }
 
-  async findOne(req, res) {
+  async findOne(req, res, next) {
     try {
       const _id = req.params.id;
       const response = await Note.findOne({_id, is_active: true});
       if (!response) {
-        return res.status(404).json({message: "Note not found"});
+        throw boom.notFound("Note not found");
       }
       res.json(response);
     } catch (error) {
-      res.json({message: error.message});
+      next(error);
     }
   }
 
-  async delete(req, res) {
+  async delete(req, res, next) {
     try {
       const _id = req.params.id;
       const response = await Note.findByIdAndDelete({_id});
       if (!response) {
-        return res.status(404).json({message: 'Note not found'});
+        throw boom.notFound("Note not found");
       }
       return res.json(response);
     } catch (error) {
-      res.json({message: error.message});
+      next(error);
     }
   }
 
-  async update(req, res) {
+  async update(req, res, next) {
     try {
       const _id = req.params.id;
       const body = req.body;
       const response = await Note.findByIdAndUpdate(_id, body, {new: true});
       if (!response) {
-        return res.status(404).json({message: 'Note not found'});
+        throw boom.notFound("Note not found");
       }
       return res.json(response);
     } catch (error) {
-      res.json({message: error.message});
+      next(error);
     }
   }
 }
