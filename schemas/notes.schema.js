@@ -10,7 +10,7 @@ const is_active = Joi.boolean();
 
 const createNotesSchema = Joi.object({
   name: name.required(),
-  description: description.required(),
+  description,
   user,
   status,
   is_active

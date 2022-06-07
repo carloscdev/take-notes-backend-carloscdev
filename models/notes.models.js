@@ -8,7 +8,7 @@ const status = {
 
 const noteSchema = new Schema({
   name: {type: String, required: [true, 'Name is required']},
-  description: {type: String, required: [true, 'Description is required']},
+  description: {type: String, default: ''},
   user: {type: Schema.Types.ObjectId, ref: 'User', required: [true, 'User Id is required']},
   is_active: {type: Boolean, default: true},
   status: {type: String, enum: status, default: 'PENDING' }
