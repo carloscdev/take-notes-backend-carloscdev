@@ -31,7 +31,7 @@ class UserService {
   async update(req, res, next) {
     try {
       const _id = req.params.id;
-      const body = _.pick(req.body, ['name', 'email', 'username', 'position']);
+      const body = _.pick(req.body, ['name', 'email', 'username', 'position', 'background']);
       const response = await User.findByIdAndUpdate(_id, body, {new: true, runValidators: true});
       res.json(response)
     } catch (error) {

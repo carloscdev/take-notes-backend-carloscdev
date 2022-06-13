@@ -16,6 +16,7 @@ const userSchema = new Schema({
   email: {type: String, required: [true, 'Email is required'], unique: true},
   password: {type: String, required: [true, 'Password is required']},
   role: {type: String, default: 'USER', enum: role},
+  background: {type: String, default: ''},
   is_active: {type: Boolean, default: true}
 }, {
   timestamps: true,
